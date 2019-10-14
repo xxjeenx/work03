@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge">
+    <title>롯데뮤지엄::Dan-flavin</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/video_set.css">
+    <link rel="shortcut icon" href="images/dan_fabicon.png">
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+
+
+
+</head>
+
+<body>
+<style>
+    body{
+        background-color: #000;
+    }
+    /*scroll bar 배경 색상 변경*/
+    ::-webkit-scrollbar-thumb {background: #486db0;}
+
+    #container{
+        background: url("images/full_danflavin.png") no-repeat center;
+    }
+
+
+    #container .section {
+        height: 980px;
+        background-color: transparent;
+    }
+
+    #section16 {
+        position: relative;
+        height: 600px;}
+    #section16 .txt_box{
+        width: 790px;
+        height: 128px;
+        position: absolute;
+        top: 72%;
+        right: 10%;
+    }
+    #section16 .txt_box .txt1{
+        margin-bottom: 30px;
+    }
+    #section16 .txt_box .txt2{
+        position: relative;
+    }
+    #section16 .txt_box .txt2:after{
+        content: '';
+        background-image: url(images/web_site/hover_next.png);
+        width: 515px;
+        height: 68px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    #section16 .txt_box .arrow{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    #section16 .txt_box .arrow:after{
+        content: '';
+        background-image: url(images/web_site/hover_arrow.png);
+        width: 99px;
+        height: 92px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    /*호버*/
+    #section16 .txt_box:hover .txt2:after,
+    #section16 .txt_box:hover .arrow:after{
+        opacity: 1;
+        transition: all 0.7s;
+    }
+
+
+
+    #footer {
+        position: relative;
+        height: 780px;}
+    #footer .txt_box{
+        width: 790px;
+        height: 128px;
+        position: absolute;
+        top: 55%;
+        right: 10%;
+    }
+    #footer .txt_box .txt1{
+        margin-bottom: 30px;
+    }
+    #footer .txt_box .txt2{
+        position: relative;
+    }
+    #footer .txt_box .txt2:after{
+        content: '';
+        background-image: url(images/next_page/hover_next.png);
+        width: 619px;
+        height: 68px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    #footer .txt_box .arrow{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    #footer .txt_box .arrow:after{
+        content: '';
+        background-image: url(images/next_page/hover_arrow.png);
+        width: 99px;
+        height: 92px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+    /*호버*/
+    #footer .txt_box:hover .txt2:after,
+    #footer .txt_box:hover .arrow:after{
+        opacity: 1;
+        transition: all 0.7s;
+    }
+
+
+    /*첫번째 비디오 위치*/
+    .video03 {
+        margin-top: -170px;
+    }
+    .video05 {
+        margin-top: 356px;
+        margin-left: -2px;
+    }
+    .video07 {
+        margin-top: 440px;
+        margin-left: -100px;
+    }
+    .video10 {
+        margin-top: 244px;
+        margin-left: -2px;
+    }
+    .video12 {
+        margin-top: -20px;
+        margin-left: -2px;
+    }
+    .video14 {
+        margin-top: -20px;
+    }
+
+
+    /*video추가시 class="video" 속성은 무조건 포함시킨뒤 class="video(number)"를 넣어주세요.*/
+
+</style>
+
+
+<section class="viewport">
+
+    <div id="scroll-container">
+
+
+        <div id="container">
+
+
+                <!-- <div id="section01" class="section">
+                    <div class="video video01">
+                        <video width="400" height="761" autoplay loop muted>
+                            <source src="video/01_menu.mp4" type="video/mp4">
+                        </video>
+                        <div class="video_cover"><img src="images/Device03.png" alt=""></div>
+                    </div>
+                </div> -->
+
+
+                <div id="section01" class="section"></div>
+                <div id="section02" class="section"></div>
+                <div id="section03" class="section">
+                  <div class="video video03">
+                      <video width="1258" height="900" autoplay loop muted>
+                          <source src="video/v1_intro.mp4" type="video/mp4">
+                      </video>
+                      <div class="video_cover"><img src="images/device.png" alt=""></div>
+                  </div>
+                </div>
+                <div id="section04" class="section"></div>
+                <div id="section05" class="section">
+                  <div class="video video05">
+                      <video width="1262" height="800" autoplay loop muted>
+                          <source src="video/v2_main.mp4" type="video/mp4">
+                      </video>
+                      <div class="video_cover"><img src="images/device_main.png" alt=""></div>
+                  </div>
+                </div>
+                <div id="section06" class="section"></div>
+                <div id="section07" class="section">
+                    <div class="video video07">
+                        <video width="1362" height="711" autoplay loop muted>
+                            <source src="video/v3_scroll.mp4" type="video/mp4">
+                        </video>
+                        <div class="video_cover"><img src="images/device_v3.png" alt=""></div>
+                    </div>
+                </div>
+
+                <div id="section08" class="section">
+
+                </div>
+
+                <div id="section09" class="section"></div>
+
+                <div id="section10" class="section">
+                    <div class="video video10">
+                        <video width="1294" height="711" autoplay loop muted>
+                            <source src="video/v4_color.mp4" type="video/mp4">
+                        </video>
+                        <div class="video_cover"><img src="images/device_v4.png" alt=""></div>
+                    </div>
+                </div>
+
+                <div id="section11" class="section"></div>
+                <div id="section12" class="section">
+                    <div class="video video12">
+                        <video width="1294" height="711" autoplay loop muted>
+                            <source src="video/v5_color2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video_cover"><img src="images/device_v5.png" alt=""></div>
+                    </div>
+                </div>
+                <div id="section13" class="section"></div>
+                <div id="section14" class="section">
+                    <div class="video video14">
+                        <video width="1250" height="720" autoplay loop muted>
+                            <source src="video/v6_information.mp4" type="video/mp4">
+                        </video>
+                        <div class="video_cover"><img src="images/device_info.png" alt=""></div>
+                    </div>
+                </div>
+                <div id="section15" class="section"></div>
+                <div id="section16">
+                  <a href="#">
+                    <div class="txt_box">
+                        <div class="txt1"><img src="images/web_site/txt_1.png" alt=""></div>
+                        <div class="txt2"><img src="images/web_site/next_2.png" alt=""></div>
+                        <div class="arrow"><img src="images/web_site/arrow_3.png" alt=""></div>
+                    </div>
+                  </a>
+
+                </div>
+                <div id="footer">
+                  <a href="../work04/index.html">
+                    <div class="txt_box">
+                        <div class="txt1"><img src="images/next_page/txt_1.png" alt=""></div>
+                        <div class="txt2"><img src="images/next_page/next_2.png" alt=""></div>
+                        <div class="arrow"><img src="images/next_page/arrow_3.png" alt=""></div>
+                    </div>
+                  </a>
+
+                </div>
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<script src="js/TweenMax.min.js"></script>
+<script src="js/smooth_scroll.js"></script>
+
+
+</body>
+</html>
